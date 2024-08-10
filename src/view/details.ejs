@@ -1,0 +1,37 @@
+<div class="details">
+    <div id="details-heading">
+        <img src="<%= job.imgURL %>" alt="company-logo">
+        <h1>Opportunity at <%= job.name %></h1>
+    </div>
+    <div class="details-info">
+        <i class="fa-solid fa-briefcase"></i>
+        <span><%= job.designation %></span><br>
+        <i class="fa-solid fa-location-dot"></i>
+        <span><%= job.location %></span><br>
+        <i class="fa-solid fa-indian-rupee-sign"></i>
+        <span><%= job.salary %></span><br>
+        <i class="fa-solid fa-hourglass-half"></i>
+        <span>Apply by <%= job.lastDate %></span><br>
+        <i class="fa-solid fa-users"></i>
+        <span><a href="/jobs/<%= job.id %>/applicants">Applicants</a> : <%= noOfApplicants %></span><br>
+        <i class="fa-solid fa-gears"></i>
+        <span>Skills Required<i class="fa-solid fa-caret-down"></i></span>
+    </div>
+    <div class="details-skills">
+        <% job.skills.forEach(skill=>{%>
+            <span><%= skill %></span>
+        <% }) %>
+    </div>
+    <div class="apply-btn-container">
+        <a id="apply-btn" class="apply-btn" href="/jobs/<%= job.id %>/details/applicationForm">Apply Now</a>
+    </div>
+    <div class="job-posted">
+        <span>Job posted by <%= job.postedBy %></span>
+        <% if(user){ %>
+        <div>
+            <a href="/jobs/<%= job.id %>/details/updateJob"><i class="fa-solid fa-file-pen"></i></a>
+            <a href="/jobs/<%= job.id %>/details/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="applicant-card">
+    <div class="applicant-heading">
+        <div>
+            Name
+        </div>
+        <div>
+            Email
+        </div>
+        <div>
+            Contact
+        </div>
+        <div>
+            Resume
+        </div>
+    </div>
+    <% applicants.forEach(applicant =>{ %>
+    <div class="applicant">
+        <div>
+            <%= applicant.name %>
+        </div>
+        <div>
+            <%= applicant.email %>
+        </div>
+        <div>
+            <%= applicant.mobile %>
+        </div>
+        <div id="view-btn">
+            <div><a href="<%= applicant.resume %>">view</a></div>
+        </div>
+    </div>
+    <% }) %>
+</div>

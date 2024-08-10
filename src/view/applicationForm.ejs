@@ -1,0 +1,26 @@
+<div class="apply-form-background">
+    <div class="apply-form-container">
+        <div id="form-heading">
+            <h4>Application Form</h4>
+        </div>
+        <form id="apply-form" action="/jobs/<%= jobId %>/details/applicationForm" method="post" enctype="multipart/form-data">
+            <div class="apply-form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="apply-form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="email">
+            </div>
+            <div class="apply-form-group">
+                <label for="mobile">Mobile</label>
+                <input type="number" id="mobile" name="mobile" placeholder="mobile">
+            </div>
+            <div class="apply-form-group">
+                <label for="resume">Resume</label>
+                <input type="file" id="resume" name="resume" placeholder="resume">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

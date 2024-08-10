@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\style.css">
+    <script src="https://kit.fontawesome.com/951b14ea33.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Job Portal</title>
+</head>
+<body>
+    <nav>
+        <div id="nav-bar-div">
+            <ul>
+                <li id="title">Easily</li>
+                <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/jobs"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                <% if(user){ %>
+                    <li><%= user %> <i class="fa-solid fa-caret-right"></i></li>
+                <% } %>
+                <% if(user){ %>
+                    <li><a href="/postJob"><i class="fa-solid fa-user-plus"></i> Post a New Job</a></li>
+                    <li><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> LogOut</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div id="search-bar-div">
+            <form>
+                <input type="search" placeholder="Search" aria-label="Search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </nav>
+    <%-body%>
+</body>
+</html>

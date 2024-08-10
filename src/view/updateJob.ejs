@@ -1,0 +1,89 @@
+<div class="postJob-form-background">
+    <div class="postJob-form-container">
+        <div id="form-heading">
+            <h4>Update Job</h4>
+        </div>
+        <form id="postJob-form" action="/jobs/<%= id %>/details/updateJob" method="post" enctype="multipart/form-data">
+            <div class="postJob-form-group">
+                <select aria-label="state" name="category" id="category">
+                    <option selected disabled value="Select a Job Category">Select a Job Category</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Non Tech">Non Tech</option>
+                </select>
+            </div>
+            <div class="postJob-form-group">
+                <select aria-label="state" name="designation" id="position">
+                    <option selected disabled value="Select a Job Position">Select a Job Position</option>
+                    <option value="HR">HR</option>
+                    <option value="SDE">SDE</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="MERN Stack Developer">MERN Stack Developer</option>
+                    <option value="MEAN Stack Developer">MEAN Stack Developer</option>
+                    <option value="Java Developer">Java Developer</option>
+                    <option value="Front End Developer">Front End Developer</option>
+                    <option value="Back End Developer">Back End Developer</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                </select>
+            </div>
+            <div class="postJob-form-group">
+                <label for="location">Location</label><br>
+                <input type="text" id="location" name="location" placeholder="Enter Job Location">
+            </div>
+            <div class="postJob-form-group">
+                <label for="name">Company Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Company Name">
+            </div>
+            <div class="postJob-form-group">
+                <input type="text" id="salary" name="salary" placeholder="Enter Salary">
+                <label for="positions">Postions</label>
+                <input type="number" id="positions" name="positions" placeholder="Enter Number Of Postions">
+            </div>
+            <div id="skills" class="postJob-form-group">
+                <label for="skills">Select skills:</label>
+                <div class="all-skills">
+                    <div>
+                        <input placeholder="skill" value="Angular" type="checkbox" name="skills[]">
+                        <label for="Angular">Angular</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="Express" type="checkbox" name="skills[]">
+                        <label for="Express">Express</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="React" type="checkbox" name="skills[]">
+                        <label for="React">React</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="MongoDB" type="checkbox" name="skills[]">
+                        <label for="MongoDB">MongoDB</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="SQL" type="checkbox" name="skills[]">
+                        <label for="SQL">SQL</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="C++" type="checkbox" name="skills[]">
+                        <label for="C++">C++</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="Java" type="checkbox" name="skills[]">
+                        <label for="Java">Java</label>
+                    </div>
+                    <div>
+                        <input placeholder="skill" value="Python" type="checkbox" name="skills[]">
+                        <label for="Python">Python</label>
+                    </div>
+                </div>
+            </div>
+            <div class="postJob-form-group">
+                <label for="date">Apply By</label>
+                <input type="date" id="date" name="lastDate" placeholder="date">
+                <label for="logo">Upload Company Logo</label>
+                <input type="file" name="logo" id="logo">
+            </div>
+            <div class="postJob-form-group">
+                <button id="postJob-submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

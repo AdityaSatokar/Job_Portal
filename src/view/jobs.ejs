@@ -1,0 +1,36 @@
+<div id="page-card">
+    <div id="jobs-card">
+        <% jobs.forEach(job=>{ %>
+        <div id="job-card">
+            <div class="jobs-header">
+                <h6>Actively hiring</h6>
+                <span><i class="fa-solid fa-chart-line"></i></span>
+            </div>
+            <div class="company-position">
+                <h3><%= job.name %></h3>
+                <h4><%= job.category %>:<%= job.designation %></h4>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-location-dot"></i>
+                <div id="job-location">
+                    <%= job.location %>
+                </div>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <span><%= job.salary %></span><br>
+                <i class="fa-solid fa-gears"></i>
+                <span>Skills Required:</span>
+            </div>
+            <div class="skills">
+                <% job.skills.forEach(skill=>{ %>
+                <span><%= skill %></span>
+                <% }) %>
+            </div>
+            <div class="more-details">
+                <div class="more-details-btn">
+                    <a href="/jobs/<%= job.id %>/details">More Details</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>   
