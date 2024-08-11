@@ -12,7 +12,8 @@ const app = express();
 const controller = new jobController();
 app.use(expressEjsLayouts);
 app.use(express.urlencoded({extended:true}));
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use(express.static(path.join(path.resolve(), "public")));
 app.set("view engine","ejs");
 app.set("views",path.join(path.resolve(),"src","view"))
 app.use(cookieParser());
